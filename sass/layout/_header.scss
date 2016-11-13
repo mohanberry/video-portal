@@ -1,0 +1,19 @@
+.header {
+		
+	padding: 20px 0;
+
+	.logo {
+		float: left;
+		height: 40px;
+	    line-height: 40px;
+
+		a {
+			color: #002e5b;
+			font-weight: 700;
+		}
+	}
+
+	.sign-in {
+		float: right;
+	}
+}

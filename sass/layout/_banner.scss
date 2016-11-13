@@ -1,0 +1,43 @@
+$text-wcolor: #fff;
+$break-tab: 768px;
+
+#banner {
+	background: url('../images/bg-image.jpg') no-repeat;
+	background-size: cover;
+	padding: 70px 0;
+    text-align: center;
+
+    h2 {
+    	color: $text-wcolor;
+	    font-size: 2.85em;
+	    line-height: 1.1em;
+	    font-weight: 400;
+	    letter-spacing: 1.1px;
+	    margin-bottom: 10px;
+    }
+
+    p {
+    	color: $text-wcolor;
+    	margin-bottom: 25px;
+    }
+
+    .search-form {
+    	input {
+	    	border: 1px solid #ebebeb;
+		    color: #999;
+		    padding: 0 15px;
+		    letter-spacing: 1px;
+		    line-height: 1;
+		    height: 40px;
+		    width: 80%;
+		    text-align: center;
+		    outline: 0;
+
+		   	@include border-radius(5px);
+		    
+		    @media all and (min-width: $break-tab) {		    	
+		   		width: 60%;
+		    }
+    	}
+    }
+}

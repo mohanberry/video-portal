@@ -1,0 +1,42 @@
+#video {
+	
+	background: #f5f5f5;
+	text-align: center;
+	padding: 50px 0;
+
+	.row {
+		margin: 0 -25px;
+	}
+
+	.col {
+		display: inline-block;
+    	padding: 0 25px;
+    	margin-bottom: 35px;
+	}
+
+	.videobox {
+    	background: #fff;
+	    border: 1px solid #eee;
+		text-align: left;
+
+	    @include transition(300ms);
+
+	    video {
+	    	cursor: pointer;
+	    }
+
+	    h5 {
+    	    padding: 12px;
+    	    
+    	    @include transition(300ms);
+	    
+	    	&:hover {
+	    		color: #002e5b;
+	    	}
+	    }
+
+	    &:hover {
+	       border-bottom: 1px solid #002e5b;
+	    }		
+	} 
+}
