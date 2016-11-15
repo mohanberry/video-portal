@@ -3,40 +3,72 @@
 	background: #f5f5f5;
 	text-align: center;
 	padding: 50px 0;
+	overflow: hidden;
 
 	.row {
-		margin: 0 -25px;
+		@media all and (min-width: $break-tab) {		    	
+		   	margin: 0 -25px;
+		}
 	}
 
 	.col {
 		display: inline-block;
     	padding: 0 25px;
     	margin-bottom: 35px;
+    	vertical-align: top;
+		@media all and (min-width: $break-tab) {		    	
+		   	width: 50%;
+		}
+    	@media all and (min-width: $break-big) {		    	
+		   	width: 33.33%;
+		}
 	}
 
 	.videobox {
     	background: #fff;
 	    border: 1px solid #eee;
 		text-align: left;
-
+    	border-radius: 3px;
+	    box-shadow: 0 0 5px rgba(0,0,0,0.1), 0 1px 0 rgba(0,0,0,0.1);
+	    
 	    @include transition(300ms);
 
 	    video {
 	    	cursor: pointer;
+	    	    width: 100%;
+   				height: auto;
+
+			@media all and (min-width: $break-big) {		    	
+		   		width: 280px;
+		   		height: 175px;
+			}	
+
 	    }
 
-	    h5 {
-    	    padding: 12px;
+	    h4 {
+    	    padding: 15px 10px;
     	    
     	    @include transition(300ms);
 	    
 	    	&:hover {
 	    		color: #002e5b;
 	    	}
+
+    		a {
+    			color: #00468a;
+    		}
+	    }
+
+	    p {
+	    	padding: 15px 10px;
 	    }
 
 	    &:hover {
 	       border-bottom: 1px solid #002e5b;
+           -webkit-transform: translateY(-3px);
+			-ms-transform: translateY(-3px);
+			transform: translateY(-3px);
+			box-shadow: 0 13px 20px 3px rgba(0,0,0,0.125), 0 -2px 9px 0px rgba(0,0,0,0.06);
 	    }		
 	} 
 }

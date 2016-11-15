@@ -1,0 +1,37 @@
+<div ng-controller="HomeController as store">
+<section id="banner">
+
+	<div class="container">
+		<h2>Search The Video Of Intrest</h2>
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+		<form class="search-form">
+			<input type="text" placeholder="Type your keyword to search" ng-model="searchKeyword" />
+		</form>
+	</div>
+
+</section><!-- Banner -->
+
+<section id="video">
+	
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col" ng-repeat="product in store.products  | filter: searchKeyword ">
+
+				<div class="videobox">
+					<h4><a href="#">{{product.name}}</a></h4>
+					
+					<video width="280" height="175" controls>
+					  <source ng-src="{{product.video}}" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+					
+					<p>{{product.description}}</p>
+				</div> 
+
+			</div>
+	</div>
+
+</section><!-- Video Gallery -->
+</div>
